@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Track the status of your complaint">
+<title>Track Complaint | CampusCare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="index.html"><i>C</i> CampusCare</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <nav class="menu" id="menu" aria-label="Main"><a href="index.html">Home</a><a href="complaint.html">File Complaint</a><a href="track.html" class="active" aria-current="page">Track</a><a href="support.html">Support & Safety</a><a href="admin.html">Admin</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="wrap">
+  <div class="page-title"><h1>Track your complaint</h1><p>Enter the ID you received when you submitted (for example CC-123456).</p></div>
+  <section class="card" style="margin:16px 0">
+    <form id="tform" class="row" style="align-items:end;grid-template-columns:1fr auto">
+      <div><label for="tid">Complaint ID</label><input id="tid" placeholder="CC-123456" autocomplete="off"></div>
+      <button class="btn" type="submit">Track</button>
+    </form>
+  </section>
+  <div id="result"></div>
+</div>
+
+</main>
+<footer class="site">
+  <div class="wrap cols">
+    <div><strong>CampusCare</strong><br>Student Complaint &amp; Anti-Ragging Portal<br>SAITM &middot; &copy; <span id="year">2026</span></div>
+    <div><a href="complaint.html">File Complaint</a><a href="track.html">Track</a><a href="support.html">Support</a><br>
+    Emergency: <strong>112</strong> &middot; Anti-Ragging Helpline: <strong>1800-180-5522</strong></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

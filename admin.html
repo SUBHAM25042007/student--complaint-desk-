@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Admin dashboard for managing complaints">
+<title>Admin Dashboard | CampusCare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="index.html"><i>C</i> CampusCare</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <nav class="menu" id="menu" aria-label="Main"><a href="index.html">Home</a><a href="complaint.html">File Complaint</a><a href="track.html">Track</a><a href="support.html">Support & Safety</a><a href="admin.html" class="active" aria-current="page">Admin</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="wrap">
+  <section id="alogin" class="card login">
+    <h1 style="font-size:1.5rem">Admin login</h1>
+    <form id="lform"><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password"><div class="err" id="e-pw"></div>
+    <button class="btn" type="submit" style="margin-top:14px">Login</button></form>
+  </section>
+  <section id="dash" hidden>
+    <div class="page-title" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><h1>Admin dashboard</h1><button class="btn sm" id="logout">Logout</button></div>
+    <div class="stats" id="stats" style="margin-top:12px"></div>
+    <div class="filters">
+      <input id="f-q" placeholder="Search..." aria-label="Search">
+      <select id="f-stage" aria-label="Stage"><option value="">All stages</option><option>Submitted</option><option>Under Review</option><option>Action Taken</option><option>Resolved</option></select>
+      <select id="f-cat" aria-label="Category"><option value="">All categories</option><option>Ragging</option><option>Bullying</option><option>Harassment</option><option>Campus Safety</option><option>Hostel Facilities</option><option>Academic Concerns</option><option>Other</option></select>
+      <select id="f-course" aria-label="Course"><option value="">All courses</option></select>
+      <select id="f-sem" aria-label="Semester"><option value="">All sem</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+    </div>
+    <div class="card table-wrap"><table><thead><tr><th>ID</th><th>Complaint</th><th>Student</th><th>Action</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <button class="btn" id="csv" style="margin-top:16px">Download CSV</button>
+  </section>
+</div>
+
+</main>
+<footer class="site">
+  <div class="wrap cols">
+    <div><strong>CampusCare</strong><br>Student Complaint &amp; Anti-Ragging Portal<br>SAITM &middot; &copy; <span id="year">2026</span></div>
+    <div><a href="complaint.html">File Complaint</a><a href="track.html">Track</a><a href="support.html">Support</a><br>
+    Emergency: <strong>112</strong> &middot; Anti-Ragging Helpline: <strong>1800-180-5522</strong></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

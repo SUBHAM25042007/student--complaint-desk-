@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CampusCare student complaint and anti-ragging portal">
+<title>Home | CampusCare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="index.html"><i>C</i> CampusCare</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <nav class="menu" id="menu" aria-label="Main"><a href="index.html" class="active" aria-current="page">Home</a><a href="complaint.html">File Complaint</a><a href="track.html">Track</a><a href="support.html">Support & Safety</a><a href="admin.html">Admin</a></nav>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Speak up. We will listen.</h1>
+    <p>CampusCare is a safe place for students to report ragging, bullying, harassment, campus safety, hostel and academic problems and to track what happens next.</p>
+    <div class="btns"><a class="btn" href="complaint.html">File a complaint</a><a class="btn alt" href="track.html">Track my complaint</a></div>
+  </div>
+</section>
+<div class="wrap">
+  <div class="stats" aria-label="Live statistics">
+    <div class="stat"><b id="st-total">0</b><span>Total complaints</span></div>
+    <div class="stat"><b id="st-open">0</b><span>Open</span></div>
+    <div class="stat"><b id="st-done">0</b><span>Resolved</span></div>
+    <div class="stat"><b id="st-urgent">0</b><span>Urgent</span></div>
+  </div>
+</div>
+<section class="section"><div class="wrap">
+  <h2>What can you report?</h2>
+  <div class="grid"><article class="card"><span class="ico" aria-hidden="true">&#128683;</span><h3>Ragging</h3><p>Physical or mental harassment of juniors. It is a criminal offence.</p></article><article class="card"><span class="ico" aria-hidden="true">&#128680;</span><h3>Bullying</h3><p>Teasing, threats, social exclusion or cyberbullying.</p></article><article class="card"><span class="ico" aria-hidden="true">&#9888;&#65039;</span><h3>Harassment</h3><p>Any unwanted behaviour that makes you feel unsafe.</p></article><article class="card"><span class="ico" aria-hidden="true">&#128737;&#65039;</span><h3>Campus Safety</h3><p>Unsafe areas, poor lighting, security problems.</p></article><article class="card"><span class="ico" aria-hidden="true">&#127968;</span><h3>Hostel Facilities</h3><p>Food, water, cleanliness, rooms and wardens.</p></article><article class="card"><span class="ico" aria-hidden="true">&#128214;</span><h3>Academic Concerns</h3><p>Attendance, marks, faculty or exam issues.</p></article></div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="wrap">
+  <h2>How it works</h2>
+  <div class="steps">
+    <div class="step"><h3>File</h3><p>Fill the short form. You can hide your name from the admin.</p></div>
+    <div class="step"><h3>Get your ID</h3><p>You receive a tracking ID like CC-123456. Keep it safe.</p></div>
+    <div class="step"><h3>Review</h3><p>The admin reviews it, urgent cases first.</p></div>
+    <div class="step"><h3>Track</h3><p>See the status and the admin remark any time.</p></div>
+  </div>
+  <div class="alert"><strong>In danger right now?</strong> Call <strong>112</strong>. For ragging, the 24x7 National Anti-Ragging Helpline is <strong>1800-180-5522</strong>. See the <a href="support.html">Support &amp; Safety</a> page.</div>
+</div></section>
+
+</main>
+<footer class="site">
+  <div class="wrap cols">
+    <div><strong>CampusCare</strong><br>Student Complaint &amp; Anti-Ragging Portal<br>SAITM &middot; &copy; <span id="year">2026</span></div>
+    <div><a href="complaint.html">File Complaint</a><a href="track.html">Track</a><a href="support.html">Support</a><br>
+    Emergency: <strong>112</strong> &middot; Anti-Ragging Helpline: <strong>1800-180-5522</strong></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

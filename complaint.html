@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="File a student complaint">
+<title>File Complaint | CampusCare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="index.html"><i>C</i> CampusCare</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <nav class="menu" id="menu" aria-label="Main"><a href="index.html">Home</a><a href="complaint.html" class="active" aria-current="page">File Complaint</a><a href="track.html">Track</a><a href="support.html">Support & Safety</a><a href="admin.html">Admin</a></nav>
+  </div>
+</header>
+<main>
+
+<div class="wrap">
+  <div class="page-title"><h1>File a complaint</h1><p>Fields marked * are required. Your complaint is taken seriously.</p></div>
+  <section class="card" style="margin-top:16px">
+    <form id="cform" novalidate>
+      <div class="row">
+        <div><label for="name">Full name *</label><input id="name" autocomplete="name"><div class="err" id="e-name"></div></div>
+        <div><label for="roll">Roll number *</label><input id="roll" inputmode="numeric"><div class="err" id="e-roll"></div></div>
+      </div>
+      <label for="email">College email *</label>
+      <input id="email" type="email" placeholder="name_rollno@saitm.ac.in"><div class="err" id="e-email"></div>
+      <div class="row">
+        <div><label for="course">Course *</label><select id="course"></select></div>
+        <div><label for="sem">Semester *</label><select id="sem"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      </div>
+      <div id="branch-wrap"><label for="branch">Branch</label><select id="branch"><option>AIML</option><option>DS</option><option>CSE</option><option>CST</option><option>EC</option></select></div>
+      <div class="row">
+        <div><label for="cat">Category *</label><select id="cat"><option>Ragging</option><option>Bullying</option><option>Harassment</option><option>Campus Safety</option><option>Hostel Facilities</option><option>Academic Concerns</option><option>Other</option></select></div>
+        <div><label for="date">Date of incident</label><input id="date" type="date"></div>
+      </div>
+      <label for="place">Place (optional)</label>
+      <input id="place" placeholder="e.g. Hostel block B, canteen, bus stop">
+      <label for="title">Subject *</label>
+      <input id="title" maxlength="90"><div class="err" id="e-title"></div>
+      <label for="msg">What happened? *</label>
+      <textarea id="msg" maxlength="800" placeholder="Describe the incident. Names of people involved are optional."></textarea>
+      <div class="meta" id="count">0 / 800</div><div class="err" id="e-msg"></div>
+      <label class="check"><input type="checkbox" id="urgent"> This is urgent / I feel unsafe right now</label>
+      <label class="check"><input type="checkbox" id="anon"> Hide my name and roll number from the admin</label>
+      <button class="btn" type="submit" style="margin-top:20px">Submit complaint</button>
+    </form>
+    <div class="success" id="ok" role="status">
+      <h2>Complaint submitted</h2>
+      <p>Your tracking ID is</p>
+      <div class="idbox" id="newid"></div>
+      <p>Save this ID. You need it to track your complaint.</p>
+      <div class="btns" style="justify-content:center"><a class="btn" href="track.html">Track complaint</a><a class="btn sm" href="complaint.html">File another</a></div>
+    </div>
+  </section>
+</div>
+
+</main>
+<footer class="site">
+  <div class="wrap cols">
+    <div><strong>CampusCare</strong><br>Student Complaint &amp; Anti-Ragging Portal<br>SAITM &middot; &copy; <span id="year">2026</span></div>
+    <div><a href="complaint.html">File Complaint</a><a href="track.html">Track</a><a href="support.html">Support</a><br>
+    Emergency: <strong>112</strong> &middot; Anti-Ragging Helpline: <strong>1800-180-5522</strong></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
